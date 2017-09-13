@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+    addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
+        console.log(`Add article ${title.value} and ${link.value}`);
+        return false;
+    }
+
 }
