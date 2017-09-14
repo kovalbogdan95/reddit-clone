@@ -10,28 +10,25 @@ import { Article } from './article.model';
   }
 })
 export class ArticleComponent implements OnInit {
-  votes: number;
-  title: string;
-  link: string;
-
+    article: Article;
 
   constructor() {
-      this.title = 'Andgular 4';
-      this.link = 'http://angular.io';
-      this.votes = 10;
+      this.article = new Article('Andgular 4','http://angular.io',10);
   }
 
   voteUp() {
-      this.votes += 1;
+      this.article.voteUp();
       return false;
   }
 
   voteDown() {
-      this.votes -= 1;
+      this.article.voteDown();
       return false;
+
   }
 
   ngOnInit() {
+    //   console.log(this.article.domain());
   }
 
 }
